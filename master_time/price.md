@@ -19,17 +19,22 @@ ITS中的关键技术之一是交通诱导系统的智能化。它以实时动�
 
 ## General System
 
-We proposed a kind of architecture which is shown in figure * * *  to serve as an intelligent traffic system. This system is divided into three parts: the client side, internet and the server side. In the client side, the car-mounted terminal would send location infomation to the server every once in a while and the smart phone (which may be replaced by car-mounted terminal) would send a request for guidance infomation and receive it on the other hand. In the server side, our server is designed to implement the following functions: real-time traffic analysis, valuation module, route planning algorithms and guidance infomation digitalizing.
+We proposed a kind of architecture which is shown in figure \ref{general_system}  to serve as an intelligent traffic system. This system is divided into three parts: the client side, internet and the server side. In the client side, the car-mounted terminal would send location infomation to the server every once in a while and the smart phone (which may be replaced by car-mounted terminal) would send a request for guidance infomation and receive it on the other hand. In the server side, our server is designed to implement the following functions: real-time traffic analysis, valuation module, route planning algorithms and guidance infomation digitalizing.
 
-[General System](general_system.png)
+![General System\label{general_system}](general_system.png)
 
 As to the car-mounted terminal, we decide to collect the probe vihicles' position with the help of BD-2, inertial navigation module and supplementary module. BeiDou is Chinese satellite navigation system and was updated to BeiDou-2 (BD2) in 2007. BD-2 system is able to provide basic positioning service in China and the surrounding area now and is designed to gradually cover the earth. It has bee tested that BD-2 performed better than GPS most of time in Chinese mainland in the eyes of visibility, stability and some other aspects[@Chen2010].
 
 The car-mounted terminal is designed to communicate with the server through LTE/4G which will become the most popular communication method in the future due to its better quality, speed and stability.
 
-[Car-mounted Terminal](car_mounted_terminal.png)
+![Car-mounted Terminal](car_mounted_terminal.png)
 
-## 价格体系
+## Pricing System
 
+Considering directed graphs $G=(V,E)$ with $n$ nodes and $m=\Theta (n)$ edges. An edge $(u,v)$ has a nonnegative weight $w(u,v)$. A shortest-path query between a source node $s$ and a target node $t$ asks for the minimum weight $d(s, t)$ of any path from $s$ to $t$. In most route planning practise, the shortest-path algorithm regard the distance as edge weight. 
+
+In our project, we decide to develop shortest-path algorithm which takes price as the edge weight. As shown in figure \ref{pricecontrol}, the traffic jam status is identified with colors. The green color means the road is open or unimpeded ()
+
+![Pricing System Sketch\label{pricecontrol}](pricecontrol.png)
 
 ## 相似图
