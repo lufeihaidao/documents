@@ -3,9 +3,11 @@ Price, Topology, Global Flow optimiun
 
 ## Abstract
 
-Nowadays traffic jam problem is increasingly worse and as a result becomes one of the major bottleneck  that restrict the city development. ITS (Intelligent Transportation System) is proposed in order to deal with it which generally combines computer science, information system, communication and control technology. Howerver, many cities in the world has become so crowd that almost no route planning method could effect well enough. In this article, we propose a kind of charging policy to meet with this challenge. Besides, we design a concept of similarity between graphs to reduce computing complexity and a thought that realize global optimal road network if considered the tanglement as a result of traditional shortest-path algorithm.
+Nowadays traffic jam problem is increasingly worse and as a result becomes one of the major bottleneck that restrict the city development. ITS (Intelligent Transportation System) is proposed in order to deal with it which generally combines computer science, information system, communication and control technology. Howerver, many cities in the world has become so crowd that almost no route planning method could effect well enough. In this article, we propose a kind of charging policy to meet with this challenge. Besides, we design a concept of similarity between graphs to reduce computing complexity and a thought that realize global optimal road network if considered the tanglement as a result of traditional shortest-path algorithm.
 
 ## Keywords
+
+charging policy, similarity between graphs, global optimal road network
 
 ## Introduction
 
