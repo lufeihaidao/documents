@@ -33,8 +33,12 @@ The car-mounted terminal is designed to communicate with the server through LTE/
 
 Considering directed graphs $G=(V,E)$ with $n$ nodes and $m=\Theta (n)$ edges. An edge $(u,v)$ has a nonnegative weight $w(u,v)$. A shortest-path query between a source node $s$ and a target node $t$ asks for the minimum weight $d(s, t)$ of any path from $s$ to $t$. In most route planning practise, the shortest-path algorithm regard the distance as edge weight. 
 
-In our project, we decide to develop shortest-path algorithm which takes price as the edge weight. As shown in figure \ref{pricecontrol}, the traffic jam status is identified with colors. The green color means the road is open or unimpeded ()
+In our project, we decide to develop shortest-path algorithm which takes price as the edge weight. As shown in figure \ref{pricecontrol}, the traffic jam status is identified with colors. The green color means the road is open or unimpeded (② and ④); The yellow color means the traffic is a little heavy (③); The red color means that traffic is very heavy (①). 
 
 ![Pricing System Sketch\label{pricecontrol}](pricecontrol.png)
 
-## 相似图
+Suppose that in the unimpeded road each car would cost 1 unit per kilometer which is writtern for $1u$; In the a little heavy road the cost is $3u/km$ and in the very heavy road it is $8u/km$. There are two schemes for one to dirve from A to B: the first is driving alone ① which will cost the driver $40u$ ($5km\times 8u/km$) and the second is driving alone ②③④ which will cost $25u$ ($5\times1+5\times3+5\times1$). Obviously, if we take reasonable charging policy, drivers would automatically keep away from the heavy road without traffic guidance (But actually traffic guidance is still a necessity considering many other issues).
+
+Whether this charging policy would be adopted or not is a administrative and  economic problem. In addition, the charging and distribution policy will definetely raise many calls in question. However, the policy is actually benefical to improving nowadays traffic jam problems.
+
+## Similarity between Graphs
