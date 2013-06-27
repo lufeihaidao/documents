@@ -11,7 +11,8 @@ charging policy, similarity between graphs, global optimal road network
 
 ## Introduction
 
-城市机动车的数量激增，据统计，截至2012年底，中国汽车数量已达到1.2亿辆，工信部预计在2020年将达到2亿辆。城市中大量的机动车使得交通质量恶化，行车效率低下，增加了时间损失和费用消耗，进而使得交通事故、交通拥堵和环境污染等问题日益严重。成为制约社会可持续发展的一大瓶颈。
+The amount of automotive vehicle is increasing sharply. According to statistics, the number of automotive vehicle in China had reached 120 million by the end of 2012 and would reach 200 million by 2020 which is predicted by Ministry of Industry and Information Technology of the People's Republic of China. The vast number of vehicle in city not only worsens the traffic quality and efficiency but also increases time and money cost which leads to more serious traffic accident, traffic jam and environment pollution. The traffic problem has become one of the major bottleneck that restrict the city development.
+
 无论是发达国家还是发展中国家，都遭遇不同程度交通问题的困扰。据美国德州运输研究所对美国39个主要城市的研究，估计美国每年因交通阻塞而造成的经济损失约410亿美元，12个最大城市每年的经济损失均超过10亿美元。日本东京每年因交通拥堵造成的时间损失以货币单位计算高达123000亿日元。欧洲每年因交通事故、交通拥堵造成的经济损失分别为500亿欧元和5000亿欧元。
 
 用高新技术改造传统产业，提高交通运输整体效率和水平，已经成为各国共识。智能交通系统是通过研究交通关键基础理论模型，将计算机处理技术、数据通信技术、信息技术和电子控制技术等有效的应用于整个交通管理体系的综合系统。ITS在道路、车辆和出行者之间建立起智能联系，最大程度的调整道路交通运行状态，从而保障人、车、路的协调与统一，在提高道路运行效率的同时，充分保障道路交通安全，提高能源利用率和改善环境质量。所以ITS是目前公认的解决城市交通拥堵、改善行车安全、提高运行效率、减少车辆对空气的污染的最佳途径，也是交通运输领域研究的前沿课题。
