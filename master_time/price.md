@@ -2,7 +2,9 @@ Price, Topology, Global Flow optimiun
 =========================================================
 
 ## Abstract
-如今拥堵的交通问题日益严重，已渐渐成为制约城市发展的一大瓶颈。本文通过利用引入道路收费体系试图达到优化路网拥堵的现状，提出了这种价格体系的策略，并给出了针对价格体系道路的路径优化算法的仿真测试。
+
+Nowadays traffic jam problem is increasingly worse and as a result becomes one of the major bottleneck  that restrict the city development. ITS (Intelligent Transportation System) is proposed in order to deal with it which generally combines computer science, information system, communication and control technology. Howerver, many cities in the world has become so crowd that almost no route planning method could effect well enough. In this article, we propose a kind of charging policy to meet with this challenge. Besides, we design a concept of similarity between graphs to reduce computing complexity and a thought that realize global optimal road network if considered the tanglement as a result of traditional shortest-path algorithm.
+
 ## Keywords
 
 ## Introduction
@@ -17,6 +19,8 @@ ITS中的关键技术之一是交通诱导系统的智能化。它以实时动�
 
 交通问题源于供需关系的不平衡：对路网资源的需求远大于路网资源的供给。从管理者的角度，如欲解决该问题当从两个方面考虑，一是扩大资源的供给，即兴建道路等基础设施，大力发展郊区地区等；二是缓解需求的压力，比如摇号限行，或者针对私家车收费，将一部分路网资源的消耗者从私家车调控到公共交通设施。第一种方法虽然效果比较好，但是在已经渐渐成熟的城市中，一方面可供建造道路的空间依然非常狭小；更一方面，建造道路涉及的事物繁多，往往难以动工。对于第二种方法，摇号限行已经在各大城市开始实施。由于不少大城市中车辆已经趋于饱和，摇号购车措施对于缓解交通压力的作用越来越小。对于限行措施，虽然可以一定程度上缓解交通压力，但是作用并不显著。本文提出一种基于价格体系的最短路径方法，这种方法能够很好的利用经济学的供需关系原理，同时可以自动的得到限行措施追求的结果：不同路段不同时间段，都能有较好的交通流量，尽量减小拥堵现象。同时还针对Dijkstra算法的路网拓扑结构，提出了一种相似图的概念，旨在减小动态交通诱导中的计算量。
 
+现有的问题是什么（比如杭州，北京这样的城市，基本全堵，无论静态还是动态诱导，都很难有显著的效果（开题报告现有问题里有），局部最优的问题，），为什么，设计怎样的方法来解决。
+
 ## General System
 
 We proposed a kind of architecture which is shown in figure \ref{general_system}  to serve as an intelligent traffic system. This system is divided into three parts: the client side, internet and the server side. In the client side, the car-mounted terminal would send location infomation to the server every once in a while and the smart phone (which may be replaced by car-mounted terminal) would send a request for guidance infomation and receive it on the other hand. In the server side, our server is designed to implement the following functions: real-time traffic analysis, valuation module, route planning algorithms and guidance infomation digitalizing.
@@ -29,7 +33,7 @@ The car-mounted terminal is designed to communicate with the server through LTE/
 
 ![Car-mounted Terminal](car_mounted_terminal.png)
 
-## Pricing System
+## Charging Policy
 
 Considering directed graphs $G=(V,E)$ with $n$ nodes and $m=\Theta (n)$ edges. An edge $(u,v)$ has a nonnegative weight $w(u,v)$. A shortest-path query between a source node $s$ and a target node $t$ asks for the minimum weight $d(s, t)$ of any path from $s$ to $t$. In most route planning practise, the shortest-path algorithm regard the distance as edge weight. 
 
@@ -42,3 +46,4 @@ Suppose that in the unimpeded road each car would cost 1 unit per kilometer whic
 Whether this charging policy would be adopted or not is a administrative and  economic problem. In addition, the charging and distribution policy will definetely raise many calls in question. However, the policy is actually benefical to improving nowadays traffic jam problems.
 
 ## Similarity between Graphs
+
