@@ -11,14 +11,13 @@ charging policy, similarity between graphs, global optimal road network
 
 ## Introduction
 
-The amount of automotive vehicle is increasing sharply. According to statistics, the number of automotive vehicle in China had reached 120 million by the end of 2012 and would reach 200 million by 2020 which is predicted by Ministry of Industry and Information Technology of the People's Republic of China. The vast number of vehicle in city not only worsens the traffic quality and efficiency but also increases time and money cost which leads to more serious traffic accident, traffic jam and environment pollution. The traffic problem has become one of the major bottleneck that restrict the city development.
+The amount of automotive vehicle is increasing sharply. According to statistics, the number of automotive vehicle in China had reached 120 million by the end of 2012 and would reach 200 million by 2020 which is predicted by Ministry of Industry and Information Technology of the People's Republic of China. The vast number of vehicle in city not only worsens the traffic quality and efficiency but also increases time and money cost which leads to more serious traffic accident, traffic jam and environment pollution. The traffic problem has become one of the major bottleneck that restrict the city development[@Qiao2011].
 
-无论是发达国家还是发展中国家，都遭遇不同程度交通问题的困扰。据美国德州运输研究所对美国39个主要城市的研究，估计美国每年因交通阻塞而造成的经济损失约410亿美元，12个最大城市每年的经济损失均超过10亿美元。日本东京每年因交通拥堵造成的时间损失以货币单位计算高达123000亿日元。欧洲每年因交通事故、交通拥堵造成的经济损失分别为500亿欧元和5000亿欧元。
+By studying basic traffic theory, ITS (Intelligent Transportation System) is proposed to generally combines computer science, information system, communication and control technology and apply them to the whole traffic management system[@Dimitrakopoulos2010]. As is well known, ITS is the best way to solve traffic problems including but not limited to traffic jam, worsening transportation quality and efficiency and pollutions as a result.
 
-用高新技术改造传统产业，提高交通运输整体效率和水平，已经成为各国共识。智能交通系统是通过研究交通关键基础理论模型，将计算机处理技术、数据通信技术、信息技术和电子控制技术等有效的应用于整个交通管理体系的综合系统。ITS在道路、车辆和出行者之间建立起智能联系，最大程度的调整道路交通运行状态，从而保障人、车、路的协调与统一，在提高道路运行效率的同时，充分保障道路交通安全，提高能源利用率和改善环境质量。所以ITS是目前公认的解决城市交通拥堵、改善行车安全、提高运行效率、减少车辆对空气的污染的最佳途径，也是交通运输领域研究的前沿课题。
+One of the most important technology in ITS is the intelligentization of traffic guidance system. A typical intelligent traffic guidance flow can be described like this: satellites or other equipment collect positions of probe vehicles and send them to the server through communication network, then the server gets traffic information via analysis and in addition return guidance information to the drivers[@Srivastava2011].
 
-ITS中的关键技术之一是交通诱导系统的智能化。它以实时动态分配理论为核心，动态地向驾驶员提供最优路径引导指令和丰富的实时交通信息，通过诱导车辆来改善路面交通状况。本文主要讨论交通诱导中路径规划算法中的一些改进概念。
-这里可以配张图
+figure or not?
 
 交通问题源于供需关系的不平衡：对路网资源的需求远大于路网资源的供给。从管理者的角度，如欲解决该问题当从两个方面考虑，一是扩大资源的供给，即兴建道路等基础设施，大力发展郊区地区等；二是缓解需求的压力，比如摇号限行，或者针对私家车收费，将一部分路网资源的消耗者从私家车调控到公共交通设施。第一种方法虽然效果比较好，但是在已经渐渐成熟的城市中，一方面可供建造道路的空间依然非常狭小；更一方面，建造道路涉及的事物繁多，往往难以动工。对于第二种方法，摇号限行已经在各大城市开始实施。由于不少大城市中车辆已经趋于饱和，摇号购车措施对于缓解交通压力的作用越来越小。对于限行措施，虽然可以一定程度上缓解交通压力，但是作用并不显著。本文提出一种基于价格体系的最短路径方法，这种方法能够很好的利用经济学的供需关系原理，同时可以自动的得到限行措施追求的结果：不同路段不同时间段，都能有较好的交通流量，尽量减小拥堵现象。同时还针对Dijkstra算法的路网拓扑结构，提出了一种相似图的概念，旨在减小动态交通诱导中的计算量。
 
