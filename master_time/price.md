@@ -3,7 +3,7 @@ Price, Topology, Global Flow optimiun
 
 ## Abstract
 
-Nowadays traffic jam problem is increasingly worse and as a result becomes one of the major bottleneck that restrict the city development. ITS (Intelligent Transportation System) is proposed in order to deal with it which generally combines computer science, information system, communication and control technology. Howerver, many cities in the world has become so crowd that almost no route planning method could effect well enough. In this article, we propose a kind of charging policy to meet with this challenge. Besides, we design a concept of similarity between graphs to reduce computing complexity and a thought that realize global optimal road network if considered the tanglement as a result of traditional shortest-path algorithm.
+Nowadays traffic jam problem is increasingly worse and as a result becomes one of the major bottleneck that restrict the city development. ITS (Intelligent Transportation System) is proposed in order to deal with it which generally combines computer science, information system, communication and control technology. Howerver, many cities in the world has become so crowded that almost no route planning method could effect well enough. In this article, we propose a kind of charging policy to meet with this challenge. Besides, we design a concept of similarity between graphs to reduce computing complexity and a thought that realize global optimal road network if considered the tanglement as a result of traditional shortest-path algorithm.
 
 ## Keywords
 
@@ -13,15 +13,15 @@ charging policy, similarity between graphs, global optimal road network
 
 The amount of automotive vehicle is increasing sharply. According to statistics, the number of automotive vehicle in China had reached 120 million by the end of 2012 and would reach 200 million by 2020 which is predicted by Ministry of Industry and Information Technology of the People's Republic of China. The vast number of vehicle in city not only worsens the traffic quality and efficiency but also increases time and money cost which leads to more serious traffic accident, traffic jam and environment pollution. The traffic problem has become one of the major bottleneck that restrict the city development[@Qiao2011].
 
+Traffic problem heads from the imbalance of supply and demands relations: the demands for road resources is always larger than supply[@Srivastava2011]. As to city managers, approaches in two aspects could be taken into consideration. The first is to build roads and other infrastructure such as  suburban. The second is to restrict transportation useage intelligently. The first approach seems that it will effect very well as a fundamental method. But actually as to morden and mature cities nowadays, it will be always impossible since that cities today are too crowded and tangle to extend and build roads. Consequently the second method would be relatively better. 
+
 By studying basic traffic theory, ITS (Intelligent Transportation System) is proposed to generally combines computer science, information system, communication and control technology and apply them to the whole traffic management system[@Dimitrakopoulos2010]. As is well known, ITS is the best way to solve traffic problems including but not limited to traffic jam, worsening transportation quality and efficiency and pollutions as a result.
 
-One of the most important technology in ITS is the intelligentization of traffic guidance system. A typical intelligent traffic guidance flow can be described like this: satellites or other equipment collect positions of probe vehicles and send them to the server through communication network, then the server gets traffic information via analysis and in addition return guidance information to the drivers[@Srivastava2011].
+One of the most important technology in ITS is the intelligentization of traffic guidance system. A typical intelligent traffic guidance flow can be described like this: satellites or other equipment collect positions of probe vehicles and send them to the server through communication network, then the server gets traffic information via analysis and in addition return guidance information to the drivers[@Manolopoulos2010].
 
-figure or not?
+figure or not? Display the general pic for ITS
 
-交通问题源于供需关系的不平衡：对路网资源的需求远大于路网资源的供给。从管理者的角度，如欲解决该问题当从两个方面考虑，一是扩大资源的供给，即兴建道路等基础设施，大力发展郊区地区等；二是缓解需求的压力，比如摇号限行，或者针对私家车收费，将一部分路网资源的消耗者从私家车调控到公共交通设施。第一种方法虽然效果比较好，但是在已经渐渐成熟的城市中，一方面可供建造道路的空间依然非常狭小；更一方面，建造道路涉及的事物繁多，往往难以动工。对于第二种方法，摇号限行已经在各大城市开始实施。由于不少大城市中车辆已经趋于饱和，摇号购车措施对于缓解交通压力的作用越来越小。对于限行措施，虽然可以一定程度上缓解交通压力，但是作用并不显著。本文提出一种基于价格体系的最短路径方法，这种方法能够很好的利用经济学的供需关系原理，同时可以自动的得到限行措施追求的结果：不同路段不同时间段，都能有较好的交通流量，尽量减小拥堵现象。同时还针对Dijkstra算法的路网拓扑结构，提出了一种相似图的概念，旨在减小动态交通诱导中的计算量。
-
-现有的问题是什么（比如杭州，北京这样的城市，基本全堵，无论静态还是动态诱导，都很难有显著的效果（开题报告现有问题里有），局部最优的问题，），为什么，设计怎样的方法来解决。
+However, current traffic guidace system doesn't seem to work well enough. Firstly, as to some metropolises, almost every street is so crowded that traffic guidance strategies cannot take effect. Furthermore, suppose that a driver got a guidance information in which he should abandon planned route, and drove from another route to the destination. Howerver, the driver might not mind the time he could saved or the saved time is lower than what he expected. As a result he would follow his original plan, which make the guidance system lost its meaning. The charging policy is proposed to meet with this trouble whihch could guide transportation demands from private cars to public transport means. Besides that, if the guidance information change the road situation from street A crowded and street B unimpeded to street A unimpeded and street B crowded, it must be meaningless. In other words, we need to take global optimum into account when we design the route planning algorithms. Finally, basic improvement is proposed to help reduce computing complexity.
 
 ## General System
 
