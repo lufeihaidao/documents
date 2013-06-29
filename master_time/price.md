@@ -45,13 +45,22 @@ In our project, we decide to develop shortest-path algorithm which takes price a
 
 Suppose that in the unimpeded road each car would cost 1 unit per kilometer which is writtern for $1u$; In the a little heavy road the cost is $3u/km$ and in the very heavy road it is $8u/km$. There are two schemes for one to dirve from A to B: the first is driving alone ① which will cost the driver $40u$ ($5km\times 8u/km$) and the second is driving alone ②③④ which will cost $25u$ ($5\times1+5\times3+5\times1$). Obviously, if we take reasonable charging policy, drivers would automatically keep away from the heavy road without traffic guidance (But actually traffic guidance is still a necessity considering many other issues).
 
-In our proposal, the payment very unit distance is related to the section of a very street, the moment of a very day, traffic jam situation and other special issues such as road reconstrution, temporary large-scale activities or some kind of emergencies. We can simplify these conditions by classifying and grading them. For the first version, we classify those conditions into three levels--good, medium and bad. In this case, the payment for every unit distance $Pay$ could be calculated like below:
+In our proposal, the payment per unit distance  $Pay$ is related to the section of a very street ($sect$), the moment of a very day ($mom$), traffic jam situation ($jam$) and other special issues ($spec$) such as road reconstrution, temporary large-scale activities or some kind of emergencies. Thus the payment for each unit distance $Pay$ could be described as:
+$$
+Pay=f(sect, mom, jam, spec)
+$$
+
+We can simplify these conditions by classifying and grading them. For the first version, we classify those conditions into three levels--good, medium and bad. In this case, the payment for each unit distance $Pay$ could be calculated like below:
 $$
 Pay=sect \cdot mom \cdot jam + spec
 $$
 in which $sect$ represents the section grade of street, $mom$ represents the moment grade, $jam$ represents traffic jam grade and $spec$ represents the special issues grade.
 
 Whether this charging policy would be adopted or not is a administrative and  economic problem. In addition, the charging and distribution policy will definetely raise many calls in question. However, the policy is actually benefical to improving nowadays traffic jam problems.
+
+## Global Flow Optimum
+
+
 
 ## Similarity between Graphs
 
