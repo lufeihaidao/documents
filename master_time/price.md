@@ -1,4 +1,4 @@
-Price, Topology, Global Flow optimiun
+Global Flow Optimum Route Planning Method Based on Payment Policy
 =========================================================
 
 ## Abstract
@@ -23,7 +23,7 @@ figure or not? Display the general pic for ITS
 
 However, current traffic guidace system doesn't seem to work well enough. Firstly, as to some metropolises, almost every street is so crowded that traffic guidance strategies cannot take effect. Furthermore, suppose that a driver got a guidance information in which he should abandon planned route, and drove from another route to the destination. Howerver, the driver might not mind the time he could saved or the saved time is lower than what he expected. As a result he would follow his original plan, which make the guidance system lost its meaning. The charging policy is proposed to meet with this trouble whihch could guide transportation demands from private cars to public transport means. Besides that, if the guidance information change the road situation from street A crowded and street B unimpeded to street A unimpeded and street B crowded, it must be meaningless. In other words, we need to take global optimum into account when we design the route planning algorithms. Finally, basic improvement is proposed to help reduce computing complexity.
 
-## General System
+## Overview of the Intergreted System
 
 We proposed a kind of architecture which is shown in figure \ref{general_system}  to serve as an intelligent traffic system. This system is divided into three parts: the client side, internet and the server side. In the client side, the vehicle-mounted terminal would send location infomation to the server every once in a while and the smart phone (which may be replaced by vehicle-mounted terminal) would send a request for guidance infomation and receive it on the other hand. In the server side, our server is designed to implement the following functions: real-time traffic analysis, valuation module, route planning algorithms and guidance infomation digitalizing.
 
@@ -35,7 +35,7 @@ The vehicle-mounted terminal is designed to communicate with the server through 
 
 ![Car-mounted Terminal](car_mounted_terminal.png)
 
-## Charging Policy
+## Payment Policy
 
 Considering directed graphs $G=(V,E)$ with $n$ nodes and $m=\Theta (n)$ edges. An edge $(u,v)$ has a nonnegative weight $w(u,v)$. A shortest-path query between a source node $s$ and a target node $t$ asks for the minimum weight $d(s, t)$ of any path from $s$ to $t$. In most route planning practise, the shortest-path algorithm regard the distance as edge weight. 
 
