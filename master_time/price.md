@@ -3,11 +3,11 @@ Global Flow Optimum Route Planning Method Based on Payment Policy
 
 ## Abstract
 
-Nowadays traffic jam problem is increasingly worse and as a result becomes one of the major bottleneck that restrict the city development. ITS (Intelligent Transportation System) is proposed in order to deal with it which generally combines computer science, information system, communication and control technology. Howerver, many cities in the world has become so crowded that almost no route planning method could effect well enough. In this article, we propose a kind of charging policy to meet with this challenge. Besides, we design a concept of similarity between graphs to reduce computing complexity and a thought that realize global optimal road network if considering the tanglement as a result of traditional shortest-path algorithm.
+Nowadays traffic jam problem is increasingly worse and as a result becomes one of the major bottleneck that restrict the city development. ITS (Intelligent Transportation System) is proposed in order to deal with it which generally combines computer science, information system, communication and control technology. Howerver, many cities in the world has become so crowded that almost no route planning method could effect well enough. In this article, we propose a kind of payment policy to meet with this challenge. Besides, we design a concept of similarity between graphs to reduce computing complexity and a thought that realize global optimal road network if considering the tanglement as a result of traditional shortest-path algorithm.
 
 ## Keywords
 
-charging policy, similarity between graphs, global optimal road network
+payment policy, similarity between graphs, global optimal road network
 
 ## Introduction
 
@@ -21,7 +21,7 @@ One of the most important technology in ITS is the intelligentization of traffic
 
 figure or not? Display the general pic for ITS
 
-However, current traffic guidace system doesn't seem to work well enough. Firstly, as to some metropolises, almost every street is so crowded that traffic guidance strategies cannot take effect. Furthermore, suppose that a driver got a guidance information in which he should abandon planned route, and drove from another route to the destination. Howerver, the driver might not mind the time he could saved or the saved time is lower than what he expected. As a result he would follow his original plan, which make the guidance system lost its meaning. The charging policy is proposed to meet with this trouble whihch could guide transportation demands from private cars to public transport means. Besides that, if the guidance information change the road situation from street A crowded and street B unimpeded to street A unimpeded and street B crowded, it must be meaningless. In other words, we need to take global optimum into account when we design the route planning algorithms. Finally, basic improvement is proposed to help reduce computing complexity.
+However, current traffic guidace system doesn't seem to work well enough. Firstly, as to some metropolises, almost every street is so crowded that traffic guidance strategies cannot take effect. Furthermore, suppose that a driver got a guidance information in which he should abandon planned route, and drove from another route to the destination. Howerver, the driver might not mind the time he could saved or the saved time is lower than what he expected. As a result he would follow his original plan, which make the guidance system lost its meaning. The payment policy is proposed to meet with this trouble which could guide transportation demands from private cars to public transport means. Besides that, if the guidance information change the road situation from street A crowded and street B unimpeded to street A unimpeded and street B crowded, it must be meaningless. In other words, we need to take global optimum into account when we design the route planning algorithms. Finally, basic improvement is proposed to help reduce computing complexity.
 
 ## Overview of the Intergreted System
 
@@ -43,7 +43,7 @@ In our project, we decide to develop shortest-path algorithm which takes price a
 
 ![Pricing System Sketch\label{pricecontrol}](pricecontrol.png)
 
-Suppose that in the unimpeded road each car would cost 1 unit per kilometer which is writtern for $1u$; In the a little heavy road the cost is $3u/km$ and in the very heavy road it is $8u/km$. There are two schemes for one to dirve from A to B: the first is driving alone ① which will cost the driver $40u$ ($5km\times 8u/km$) and the second is driving alone ②③④ which will cost $25u$ ($5\times1+5\times3+5\times1$). Obviously, if we take reasonable charging policy, drivers would automatically keep away from the heavy road without traffic guidance (But actually traffic guidance is still a necessity considering many other issues).
+Suppose that in the unimpeded road each car would cost 1 unit per kilometer which is writtern for $1u$; In the a little heavy road the cost is $3u/km$ and in the very heavy road it is $8u/km$. There are two schemes for one to dirve from A to B: the first is driving alone ① which will cost the driver $40u$ ($5km\times 8u/km$) and the second is driving alone ②③④ which will cost $25u$ ($5\times1+5\times3+5\times1$). Obviously, if we take reasonable payment policy, drivers would automatically keep away from the heavy road without traffic guidance (But actually traffic guidance is still a necessity considering many other issues).
 
 In our proposal, the payment per unit distance  $Pay$ is related to the section of a very street ($sect$), the moment of a very day ($mom$), traffic jam situation ($jam$) and other special issues ($spec$) such as road reconstrution, temporary large-scale activities or some kind of emergencies. Thus the payment for each unit distance $Pay$ could be described as:
 $$
@@ -56,11 +56,11 @@ Pay=sect \cdot mom \cdot jam + spec
 $$
 in which $sect$ represents the section grade of street, $mom$ represents the moment grade, $jam$ represents traffic jam grade and $spec$ represents the special issues grade.
 
-Whether this charging policy would be adopted or not is a administrative and  economic problem. In addition, the charging and distribution policy will definetely raise many calls in question. However, the policy is actually benefical to improving nowadays traffic jam problems.
+Whether this payment policy would be adopted or not is a administrative and  economic problem. In addition, the payment and distribution policies will definetely raise many calls in question. However, the policy is actually benefical to improving nowadays traffic jam problems.
 
 ## Global Flow Optimum
 
-
+With payment policy, drivers are guided from heavy roads to unimpeded roads. It works well if only one driver send a request for guidance but almost not work to server large amount of drivers.
 
 ## Similarity between Graphs
 
