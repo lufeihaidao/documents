@@ -60,7 +60,10 @@ Whether this payment policy would be adopted or not is a administrative and  eco
 
 ## Global Flow Optimum
 
-With payment policy, drivers are guided from heavy roads to unimpeded roads. It works well if only one driver send a request for guidance but almost not work to server large amount of drivers.
+With payment policy, drivers are guided from heavy roads to unimpeded roads. It works well if only one driver send a request for guidance but almost not work to server large amount of drivers, just as shown in figure \ref{global_flow_optimum}.
+
+![Global Flow Optimum](global_flow_optimum.png)
+
 
 ## Similarity between Graphs
 
