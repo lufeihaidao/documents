@@ -23,7 +23,7 @@ figure or not? Display the general pic for ITS
 
 However, current traffic guidace system doesn't seem to work well enough. Firstly, as to some metropolises, almost every street is so crowded that traffic guidance strategies cannot take effect. Furthermore, suppose that a driver got a guidance information in which he should abandon planned route, and drove from another route to the destination. Howerver, the driver might not mind the time he could saved or the saved time is lower than what he expected. As a result he would follow his original plan, which make the guidance system lost its meaning. The payment policy is proposed to meet with this trouble which could guide transportation demands from private cars to public transport means. Besides that, if the guidance information change the road situation from street A crowded and street B unimpeded to street A unimpeded and street B crowded, it must be meaningless. In other words, we need to take global optimum into account when we design the route planning algorithms. Finally, basic improvement is proposed to help reduce computing complexity.
 
-## Overview of the Intergreted System
+## Overview of Intergreted System
 
 We proposed a kind of architecture which is shown in figure \ref{general_system}  to serve as an intelligent traffic system. This system is divided into three parts: the client side, internet and the server side. In the client side, the vehicle-mounted terminal would send location infomation to the server every once in a while and the smart phone (which may be replaced by vehicle-mounted terminal) would send a request for guidance infomation and receive it on the other hand. In the server side, our server is designed to implement the following functions: real-time traffic analysis, valuation module, route planning algorithms and guidance infomation digitalizing.
 
@@ -60,10 +60,15 @@ Whether this payment policy would be adopted or not is a administrative and  eco
 
 ## Global Flow Optimum
 
-With payment policy, drivers are guided from heavy roads to unimpeded roads. It works well if only one driver send a request for guidance but almost not work to server large amount of drivers, just as shown in figure \ref{global_flow_optimum}.
+With payment policy, drivers are guided from heavy roads to unimpeded roads. It works well if only one driver send a request for guidance but almost doesn't work to server large amount of drivers, just as shown in figure \ref{global_flow_optimum}. The target should be the effective utilization of transportation resources, in other words, the route planning method should be able to maximize the whole traffic flow in general.
 
 ![Global Flow Optimum](global_flow_optimum.png)
 
+How to manage this distribution policy involve complicated categories and we are still foring in this issue. For a simple version, ignoring special issues condition, the payment per unit distance is:
+$$
+Pay=sect \cdot mom \cdot jam \cdot c(sect, mom, jam)
+$$
+in which c means the adjustment coefficient to fit the global flow optimum algorithm which is also effected by $sect$, $mom$ and $jam$.
 
 ## Similarity between Graphs
 
